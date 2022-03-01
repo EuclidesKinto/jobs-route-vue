@@ -19,10 +19,7 @@
         class="btn btn-info mb-2 mr-2">
         Contatos
       </router-link>
-
-     <router-view></router-view>
-
-    </div>
-    
+      <router-view></router-view>
+    </div>    
   </div>
 </template>
