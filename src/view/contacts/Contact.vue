@@ -1,25 +1,23 @@
 <template>
-<div>
-  <h3 class="font-weight-light mt-4">Contatos</h3>
-  <button 
-  class="btn btn-secondary mt-4 mb-4"
-  @click="voltar"
-  >Voltar</button>
-</div>
+<ContactList/>
 </template>
 
 <script>
+import ContactList from './../../components/contacts/ContactList.vue';
 export default {
-  name: 'Contact',
-  methods: {
-    voltar() {
-      // this.$router.push('/');
-      // this.$router.replace('/');
-      // this.$router.go(-1);
-      // this.$router.forward();
-      this.$router.back();
-    },
+  components: {
+    ContactList,
   },
+  name: 'Contact',
+  // methods: {
+  //   voltar() {
+  //     // this.$router.push('/');
+  //     // this.$router.replace('/');
+  //     // this.$router.go(-1);
+  //     // this.$router.forward();
+  //     this.$router.back();
+  //   },
+  // },
 };
 </script>
 
