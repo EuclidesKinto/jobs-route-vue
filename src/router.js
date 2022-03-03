@@ -4,7 +4,8 @@ import Contacts from '@/view/contacts/Contacts';
 import Contact from '@/view/contacts/Contact';
 import ContactHome from '@/view/contacts/ContactHome';
 import Home from '@/view/Home';
-import ContactEdit from "@/view/contacts/ContactEdit";
+import Erro404 from '@/view/Erro404';
+import ContactEdit from '@/view/contacts/ContactEdit';
 
 Vue.use(VueRouter);
 
@@ -21,12 +22,14 @@ export default new VueRouter({
           path: ':id/editar',
           components: {
             default: ContactEdit,
-            'contato-detalhes': Contact
-          }
+            'contato-detalhes': Contact,
+          },
         },
         { path: '', component: ContactHome },
       ],
     },
     { path: '/', component: Home },
+    // { path: '*', redirect: '/contatos' },
+    { path: '/contatos*', component: Erro404 },
   ],
 });
